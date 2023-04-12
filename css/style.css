@@ -455,7 +455,7 @@ dark-box {
 /* ==========================================================================Hero========================================================================== */
 .hero {
 	background: url('../img/header-bg.jpg') right bottom no-repeat;
-	background-size: contain;
+	background-size: cover;
 	padding:110px 0 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
