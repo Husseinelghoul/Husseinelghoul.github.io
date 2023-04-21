@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+    <link rel="icon" href="assets/images/memoji.png">
+
 
   <title>Hussein ElGhoul</title>
 
@@ -56,7 +58,7 @@ https://templatemo.com/tm-568-digimedia
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="assets/images/mylogo.png" alt="">
+              <img src="assets/images/memoji.png" alt="memoji">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -67,7 +69,7 @@ https://templatemo.com/tm-568-digimedia
               <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
               <li class="scroll-to-section"><a href="#blog">Blog</a></li> -->
               <li class="scroll-to-section">
-                <div class="border-first-button"><a href="#contact">Contact me</a></div>
+                <div class="border-first-button"><a href="assets/hussein_elghoul_resume.pdf" download>Download Resume</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -148,7 +150,7 @@ https://templatemo.com/tm-568-digimedia
                         <div class="progress-value">
                           <div>
                             50%<br>
-                            <span> Data Wizard <br> and Educator</span>
+                            <span> Data Wizard </span>
                           </div>
                         </div>
                       </div>
@@ -166,7 +168,7 @@ https://templatemo.com/tm-568-digimedia
                         <div class="progress-value">
                           <div>
                             30%<br>
-                            <span>Social <br>and Nature Butterfly</span>
+                            <span>Educator</span>
                           </div>
                         </div>
                       </div>
@@ -184,7 +186,7 @@ https://templatemo.com/tm-568-digimedia
                         <div class="progress-value">
                           <div>
                             20%<br>
-                            <span>Secret Agent</span>
+                            <span>Social <br>and Nature Butterfly</span>
                           </div>
                         </div>
                       </div>
@@ -628,7 +630,7 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="https://public.herotofu.com/v1/ab745c30-e03d-11ed-8300-fd92f9e8911a" method="post" accept-charset="UTF-8">
             <div class="row">
               <div class="col-lg-12">
                 <div class="contact-dec">
@@ -675,10 +677,10 @@ https://templatemo.com/tm-568-digimedia
                           <input type="text" name="name" id="name" placeholder="Name" autocomplete="on" required>
                         </fieldset>
                         <fieldset>
-                          <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+                          <input type="email" name="email" id="email" placeholder="Your Email" required>
                         </fieldset>
                         <fieldset>
-                          <input type="text" name="_subject" id="subject" placeholder="Subject" autocomplete="on">
+                          <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="on">
                         </fieldset>
                       </div>
                       <div class="col-lg-6">
@@ -689,8 +691,7 @@ https://templatemo.com/tm-568-digimedia
                       </div>
                       <div class="col-lg-12">
                         <fieldset>
-                          <button type="button" onclick="submitForm()" id="form-submit" class="main-button ">Send
-                            Message Now</button>
+                          <button type="submit" id="form-submit" class="border-first-button">Send Message Now</button>
                         </fieldset>
                       </div>
                     </form>
@@ -708,9 +709,12 @@ https://templatemo.com/tm-568-digimedia
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 Hussein ElGhoul. All Rights Reserved.
-            <br>Design: <a href="https://elghoul.me" target="_parent" title="Weboages Designs">HusseinElGhoul</a>
-          </p>
+            <p>
+              Copyright © <span id="year"></span> Hussein ElGhoul. All Rights Reserved.
+            </p>
+            <p>
+              Design: <a href="https://elghoul.me" target="_parent" title="Weboages Designs">HusseinElGhoul</a>
+            </p>
         </div>
       </div>
     </div>
@@ -725,23 +729,9 @@ https://templatemo.com/tm-568-digimedia
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
-    function submitForm() {
-      const form = document.getElementById('contact-form');
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form)
-      })
-        .then(() => {
-          alert('Thank you for your message!');
-          window.location.href = 'https://example.com/thank-you';
-        })
-        .catch(() => {
-          alert('Oops! Something went wrong.');
-        });
-    }
-
+    const year = new Date().getFullYear();
+    document.getElementById("year").textContent = year;
   </script>
-
 </body>
 
 </html>
