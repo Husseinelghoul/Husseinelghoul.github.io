@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:ElGhoul;Hussein;;;
+FN:Hussein ElGhoul
+ORG:Quiqup
+TITLE:Data Engineer
+TEL;TYPE=CELL:+96176024494
+EMAIL:husseinelghoul8@gmail.com
+EMAIL;TYPE=WORK:hussein@quiqup.com
+ADR;TYPE=HOME:Beirut Lebanon
+END:VCARD
