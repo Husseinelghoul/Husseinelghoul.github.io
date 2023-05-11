@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="timeline">
+        <ul>
+          <li>
+            <div>
+              <time>2023</time>
+              <div class="discovery">
+                <h1>Coursera Instructor</h1>
+                <p>
+                  Nimblebot
+                </p>
+                <span style="font-size: smaller; color: green;">Ongoing</span>
+              </div>
+              <div class="scientist">
+                <h1>Instructional Designer</h1>
+                <span>Fast & Curious</span>
+                <span style="font-size: smaller; color: green;">Ongoing</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2021</time>
+              <div class="scientist">
+                <h1>Data Engineer</h1>
+                <span>Quiqup</span>
+                <span style="font-size: smaller; color: green;">Ongoing</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2020</time>
+              <div class="discovery">
+                <h1>Data Analyst</h1>
+                <p>
+                  Paragon Shift
+                </p>
+              </div>
+              <div class="scientist">
+                <h1>ML Intern</h1>
+                <span>Zaka.ai</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2019 Winter</time>
+              <div class="discovery">
+                <h1>Brand Ambassador</h1>
+                <p>
+                  Careem
+                </p>
+              </div>
+              <div class="scientist">
+                <h1>Computer Lab Assistant</h1>
+                <span>American University of Beirut</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2019 Spring</time>
+              <div class="discovery">
+                <h1>Sales Representative</h1>
+                <p>
+                  Charity Donation
+                </p>
+              </div>
+              <div class="scientist">
+                <h1>Educator</h1>
+                <span>Beyong Learning</span>
+                <span style="font-size: smaller; color: green;">Ongoing</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2018</time>
+              <div class="scientist">
+                <h1>B.S. in Computer Science</h1>
+                <p>
+                  American University of Beirut
+                </p>
+              </div>
+              <div class="scientist">
+                <h1>Catering Assistant</h1>
+                <span>Abela</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2017</time>
+              <div class="discovery">
+                <h1>Sales Representative</h1>
+                <p>
+                  Malik's Bookstor
+                </p>
+              </div>
+            </div>
+        </ul>
+      </section>
+</body>
+<script>
+    var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+</script>
+</html>
